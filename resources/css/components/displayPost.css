@@ -1,0 +1,257 @@
+.post {
+    background-color: #2c2c2c; /* Dark background for posts */
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 2rem;
+    color: #f0f0f0;
+}
+.flash-alert {
+    display: none;
+    background-color: #2c2c2c;
+    border: 1px solid red;
+    color: red;
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.flash-alert.show {
+    display: block;
+    opacity: 1;
+}
+.warning-icon{
+    margin-left: 5px;
+}
+
+.comment{
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #444;
+}
+
+.post .profile{
+    border: #444 solid  5px;
+    border-radius: 5px;
+}
+.username{
+   color:#FD0101 ;
+    margin-left: 15px;
+}
+.post .header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.post .created-at {
+    font-size: 0.9rem; 
+    color:#FD0101 ; 
+    margin: 0; 
+}
+
+/* Hover Effect for Posts */
+.post:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.categories-d{
+    margin: 0 0 8px 12px  ;
+}
+.post h1 {
+    font-size: 2rem;
+    color: white; /* Red for post titles */
+}
+
+.post h2 {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-bottom: 1rem;
+   display: flex;
+    align-items: center;
+
+}
+
+
+.post p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.post .category {
+    background-color: #e60000; /* Red for categories */
+    color: #fff;
+    padding: 0.3rem 0.6rem;
+    margin-right: 0.5rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.post .btn {
+    background-color: #333; /* Dark background for buttons */
+    color: #e60000; /* Red text */
+    border: none;
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem 0.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.post .btn:hover {
+    background-color: #e60000; /* Red for hover */
+    color: white;
+}
+.isReacted{
+    background-color: #e60000 !important; 
+    color: white !important;
+}
+
+
+
+/* Comments Section Styling */
+.comments {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
+
+.comments-btn {
+    background-color: #333;
+    color: #e60000;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.comments-btn:hover {
+    background-color: #e60000;
+    color: white;
+}
+
+/* Individual Comment Styling */
+.comments div {
+    margin-bottom: 1rem;
+}
+
+.comments h3 {
+    font-size: 1.1rem;
+    color: #e60000; /* Red for comment username */
+}
+
+.comments p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 0.8rem;
+}
+
+.comments form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.nothing{
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 80vh;
+}
+.dead{
+    margin-left: 15px;
+}
+.comments form textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: #111;
+    color: #f0f0f0;
+    border-radius: 8px;
+    border: 1px solid #444;
+    font-size: 1rem;
+}
+
+.comments form button {
+    padding: 1rem;
+    background-color: #444 ;
+    color: red;
+    border: none;
+    width: fit-content;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition:  0.3s ease-in-out;
+}
+
+.comments form button:hover {
+    background-color: #b50000; /* Darker red for button hover */
+    color: white;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .post {
+        padding: 1rem;
+    }
+
+    .post h1 {
+        font-size: 1.6rem;
+    }
+
+    .post h2 {
+        font-size: 1rem;
+    }
+
+    .post .btn {
+        width: 20%;
+    }
+
+    .comments {
+        padding: 0.8rem;
+    }
+
+    .comments-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480PX) {
+    .post {
+        padding: 1rem;
+    }
+
+    .post h1 {
+        font-size: 1.6rem;
+    }
+
+    .post h2 {
+        font-size: 1rem;
+    }
+
+    .post .btn {
+        width: 20%;
+    }
+
+    .comments {
+        padding: 0.8rem;
+    }
+
+    .comments-btn {
+        width: 100%;
+    }
+}

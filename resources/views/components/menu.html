@@ -1,0 +1,53 @@
+{{define "menu"}}
+<div class="menu">
+  <h2 class="title">Menu</h2>
+  <div>
+    <div>
+      {{if .IsLoggedIn}}
+
+      <button popovertarget="formPost" class="btn-menu">create post</button>
+{{end}}
+
+    </div>
+    <div>
+      
+
+        <a href="/myliked">
+        <button class="btn-menu">
+          Liked Posts
+        </button>
+      </a>
+      
+    </div>
+    <div>
+      <a href="/createdPost">
+        <button class="btn-menu">
+          My Posts
+        </button>
+      </a>
+    </div>
+    <div class="categories">
+
+      <button class="btn-menu" popovertarget="categories">
+        Categories
+      </button>
+      <div id="categories"  popover>
+        <div class="categories-checkbox ">
+          <form action="/PostByCategories" method="get">
+            {{range .Category}}
+            <div class="categorie">
+              <input type="checkbox" id="filter-{{.Name}}"  name="categories" value="{{.ID}}" hidden>
+
+              <label for="filter-{{.Name}}" class="categorie-label">{{.Name}}</label>
+            </div>
+            {{end}}
+            <button type="submit" class="btn-filter ">
+              Filter
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{end}}

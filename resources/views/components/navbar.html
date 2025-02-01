@@ -1,0 +1,14 @@
+{{define "navbar"}}
+<header class="navbar">
+    <h1><a class="title" href="/">Forum</a></h1>
+    <nav >
+      {{if .IsLoggedIn}}
+        <a href="/logout">Logout</a>
+        {{else}}
+        <!-- if user login -->
+        <a href="/register">Register</a>
+        <a href="/login">Login</a>
+        {{end}}
+    </nav>
+</header>
+{{end}}

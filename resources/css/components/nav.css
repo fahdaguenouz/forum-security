@@ -1,0 +1,21 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: white;
+    background-color: #FD0101;
+    
+}
+.navbar .title{
+    color: white;
+}
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 0 1rem;
+}
+.navbar a:hovre {
+    color: #e60000;
+}
+
